@@ -24,9 +24,13 @@ Things to reflect on:
   
 */
 
-let a = "Alice";
-let b = 5;
-let c = 20;
-let d = a + " bought " + b + " items for $" + c + ".";
+let customerName = "Alice";     // name of the customer
+let itemName = "book";          // item that was bought
+let itemCount = 5;              // number of items bought
+let totalPrice = 20;            // base total price (before tax)
+let taxRate = 0.07;             // sales tax
 
-console.log(d);
+let totalPriceWithTax = totalPrice + (totalPrice * taxRate);
+
+let purchaseMessage = customerName + " bought " + itemCount + " " + itemName + "(s) for $" + totalPriceWithTax.toFixed(2) + ".";
+console.log(purchaseMessage);
